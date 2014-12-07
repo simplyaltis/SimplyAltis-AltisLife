@@ -1,6 +1,6 @@
 SimplyAltis Development
 ======
-This is the source code for the SimplyAltis Arma 3 Server. [Visit us at http://www.SimplyAltis.com](https://www.simplyaltis.com)
+This is the source code for the SimplyAltis Arma 3 Server.
 
 ToDo - 12/5/14
 ------
@@ -56,7 +56,7 @@ ToDo - 12/5/14
 
 
 
-WIP Changelog - 12/5/14
+WIP Changelog - 12/7/14
 ------
 - Adjust max carrying weight
 - Fixed jail exploit
@@ -67,3 +67,10 @@ WIP Changelog - 12/5/14
 - Added a minimum to bank transfers to stop $1 donation trolling
 - Fixed debit card purchase not updating atm value
 - Finally fixed hatchback cop lights - FOR YOU BRIAN
+- Added ability to impound vehicles for SAS members above level 2 (Crisis Operator & above)
+- Fixed SAS paycheck amounts (200,300,500,600,700 to 200,300,400,500,600)
+- SAS members now have the ability to pullout players from any vehicles (similar to SAPD)
+- Players can now pullout players from their own vehicles if they are stationary
+- Changed revive animation
+- Altered the deathcam
+- 

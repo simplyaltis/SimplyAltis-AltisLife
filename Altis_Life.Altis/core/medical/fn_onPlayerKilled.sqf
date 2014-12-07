@@ -6,10 +6,11 @@
 	When the player dies collect various information about that player
 	and pull up the death dialog / camera functionality.
 */
-private["_unit","_killer"];
+private["_unit","_killer","_pos"];
 disableSerialization;
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
+_pos = [(getPosATL _unit select 0)-(vectorDir _unit select 0)*3,(getPosATL _unit select 1)-(vectorDir _unit select 1)*3,(getPosATL _unit select 2)+1];
 
 //Set some vars
 _unit setVariable["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
@@ -27,10 +28,11 @@ showCinemaBorder TRUE;
 life_deathCamera cameraEffect ["Internal","Back"];
 createDialog "DeathScreen";
 life_deathCamera camSetTarget _unit;
-life_deathCamera camSetRelPos [0,3.5,4.5];
-life_deathCamera camSetFOV .5;
-life_deathCamera camSetFocus [50,0];
-life_deathCamera camCommit 0;
+life_deathCamera CamPreparePos _pos;
+life_deathCamera camCommitPrepared 0;
+life_deathCamera camSetRelPos [-3, 20, 10];
+life_deathCamera camPrepareFOV 0.474;
+life_deathCamera camCommit 20;
 
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
@@ -48,11 +50,11 @@ _unit spawn
 	round(_maxTime - time) <= 0 OR isNull _this OR life_request_timer};
     
     if (life_request_timer) then {
-        life_request_timer = false; //resets increased respawn timer
         _maxTime = time + (life_respawn_timer * 300);
         waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
         round(_maxTime - time) <= 0 || isNull _this};
     };
+    life_request_timer = false; //resets increased respawn timer
     
 	_RespawnBtn ctrlEnable true;
 	_Timer ctrlSetText localize "STR_Medic_Respawn_2";

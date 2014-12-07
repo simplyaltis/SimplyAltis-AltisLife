@@ -19,9 +19,9 @@ switch(__GETC__(life_medicLevel)) do
 {
 	case 1: {life_paycheck = life_paycheck + 200;};
 	case 2: {life_paycheck = life_paycheck + 300;};
-	case 3: {life_paycheck = life_paycheck + 500;};
-	case 4: {life_paycheck = life_paycheck + 600;};
-	case 5: {life_paycheck = life_paycheck + 700;};
+	case 3: {life_paycheck = life_paycheck + 400;};
+	case 4: {life_paycheck = life_paycheck + 500;};
+	case 5: {life_paycheck = life_paycheck + 600;};
 };
 
 [] call life_fnc_spawnMenu;
