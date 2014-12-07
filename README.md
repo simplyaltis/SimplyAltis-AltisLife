@@ -73,4 +73,9 @@ WIP Changelog - 12/7/14
 - Players can now pullout players from their own vehicles if they are stationary
 - Changed revive animation
 - Altered the deathcam
+- SAS members can now see other SAS members on the map + altered dead markers for SAS
+- Fixed not being able to escort ziptied SAPD members
+- Increased diameter of gather zones
+- Gathering resources is randomized from 1 to X, where X is 3 for legal resouses and X is 2 for illegal resources.
+- Damage calculations are edited. No more instant heals by taze or vdm.
 - 

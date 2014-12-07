@@ -9,9 +9,10 @@ private["_unit"];
 _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if((player distance _unit > 3)) exitWith {};
-if((_unit getVariable "restrained")) exitWith {};
+if((_unit getVariable ["restrained", false])) exitWith { hint "Player is already restrained."; };
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
+if ((side player == west) AND (side _unit == west)) exitWith {};
 if (side player == civilian) then {
 
     if(player distance (getMarkerPos "safe1") < 400 && !license_civ_bountyhunter) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};

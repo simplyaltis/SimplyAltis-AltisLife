@@ -15,7 +15,7 @@ life_action_gathering = true;
 
 //Find out what zone we're near
 {
-	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
+	if(player distance (getMarkerPos _x) < 50) exitWith {_zone = _x;};
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {
@@ -27,15 +27,15 @@ if(_zone == "") exitWith {
 switch(true) do {
 	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_gather = "apple"; _val = 3;};
 	case (_zone in ["peaches_1","peaches_2","peaches_3"]): {_gather = "peach"; _val = 3;};
-	case (_zone in ["heroin_1"]): {_gather = "heroinu"; _val = 1;};
-	case (_zone in ["cocaine_1"]): {_gather = "cocaine"; _val = 1;};
-    case (_zone in ["phosphorous_1"]): {_gather = "phosphorous"; _val = 1;};
-    case (_zone in ["ephedra_1"]): {_gather = "ephedra"; _val = 1;};
-    case (_zone in ["frog_swamp1"]): {_gather = "frog"; _val = 1;};
-    case (_zone in ["hops_1"]): {_gather = "hops"; _val = 2;};
-    case (_zone in ["rye_1"]): {_gather = "rye"; _val = 2;};
-    case (_zone in ["yeast_1"]): {_gather = "yeast"; _val = 2;};
-	case (_zone in ["weed_1","weed_2","weed_3"]): {_gather = "cannabis"; _val = 1;};
+	case (_zone in ["heroin_1"]): {_gather = "heroinu"; _val = 1 + (round random 2);};
+	case (_zone in ["cocaine_1"]): {_gather = "cocaine"; _val = 1 + (round random 2);};
+    case (_zone in ["phosphorous_1"]): {_gather = "phosphorous"; _val = 1 + (round random 3);};
+    case (_zone in ["ephedra_1"]): {_gather = "ephedra"; _val = 1 + (round random 2);};
+    case (_zone in ["frog_swamp1"]): {_gather = "frog"; _val = 1 + (round random 2);};
+    case (_zone in ["hops_1"]): {_gather = "hops"; _val = 1 + (round random 3);};
+    case (_zone in ["rye_1"]): {_gather = "rye"; _val = 1 + (round random 3);};
+    case (_zone in ["yeast_1"]): {_gather = "yeast"; _val = 1 + (round random 3);};
+	case (_zone in ["weed_1","weed_2","weed_3"]): {_gather = "cannabis"; _val = 1 + (round random 2);};
 	default {""};
 };
 //gather check??
