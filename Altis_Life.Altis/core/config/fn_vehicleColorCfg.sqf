@@ -41,7 +41,8 @@ switch (_vehicle) do
             ["textures\civ\civ_hatchback_sport_ghost.jpg","civ"],
             ["textures\civ\civ_hatchback_sport_kenblock.jpg","civ"],
             ["textures\civ\civ_hatchback_sport_redgull.jpg","civ"],
-            ["textures\civ\civ_hatchback_sponge.jpg","civ"]
+            ["textures\civ\civ_hatchback_sponge.jpg","civ"],
+            ["textures\cop\sa_hatchback.jpg","cop"]
 		];
 	};
 		
@@ -67,7 +68,8 @@ switch (_vehicle) do
 			["textures\civ\offroad_steel.jpg","civ"],
 			["textures\civ\PokemonCar.jpg","civ"],
 			["textures\civ\civ_offroad_nyancat.jpg","civ"],
-            ["textures\civ\RAM.jpg","civ"]
+            ["textures\civ\RAM.jpg","civ"],
+            ["textures\cop\sa_offroad.jpg","cop"]
 		];
 	};
 	
@@ -90,7 +92,8 @@ switch (_vehicle) do
             ["textures\civ\civ_hatchback_sport_ghost.jpg","civ"],
             ["textures\civ\civ_hatchback_sport_kenblock.jpg","civ"],
             ["textures\civ\civ_hatchback_sport_redgull.jpg","civ"],
-            ["textures\civ\civ_hatchback_sponge.jpg","civ"]
+            ["textures\civ\civ_hatchback_sponge.jpg","civ"],
+            ["textures\cop\sa_hatchback.jpg","cop"]
 		];
 	};
 	
@@ -112,7 +115,9 @@ switch (_vehicle) do
             ["textures\civ\civ_suv_batman.jpg","civ"],
             ["textures\civ\civ_suv_ferrari.jpg","civ"],
             ["textures\civ\civ_suv_superman.jpg","civ"],
-            ["textures\civ\Batman.jpg","civ"]
+            ["textures\civ\Batman.jpg","civ"],
+            ["textures\cop\sa_suv.jpg","cop"],
+            ["textures\cop\sa_suvblack.jpg","cop"]
 		];
 	};
 	

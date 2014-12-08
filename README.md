@@ -90,3 +90,4 @@ WIP Changelog - 12/7/14
 - Markets are now alphabetized
 - Cleaned up string tables. We are an english only server!
 - Compressed all the skins and removed unnecessary ones
+- Added official SimplyAltis SAPD vehicle skins by Off. Devon!

@@ -35,6 +35,7 @@ switch (_vehicle) do
             case 16: {_color = "Pokemon"};
             case 17: {_color = "Nyan Cat"};
             case 18: {_color = "Dodge Ram"};
+            case 19: {_color = "SimplyAltis"};
 		};
 	};
 	
@@ -58,6 +59,7 @@ switch (_vehicle) do
             case 13: {_color = "Energy"};
             case 14: {_color = "Redgull"};
             case 15: {_color = "Spongebob"};
+            case 16: {_color = "SimplyAltis"};
 		};
 	};
 	
@@ -80,6 +82,7 @@ switch (_vehicle) do
             case 12: {_color = "Energy"};
             case 13: {_color = "Redgull"};
             case 14: {_color = "Spongebob"};
+            case 15: {_color = "SimplyAltis"};
 		};
 	};
 	
@@ -102,6 +105,8 @@ switch (_vehicle) do
             case 12: {_color = "Ferrari";};
             case 13: {_color = "Superman";};
             case 14: {_color = "Dark Knight";};
+            case 15: {_color = "SimplyAltis"};
+            case 16: {_color = "SimplyAltis Black"};
 		};
 	};
 	
