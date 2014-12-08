@@ -88,3 +88,4 @@ WIP Changelog - 12/7/14
 - More items are now removed on being arrested
 - All the new items are saved and persistant in your inventory
 - Markets are now alphabetized
+- Cleaned up string tables. We are an english only server!
