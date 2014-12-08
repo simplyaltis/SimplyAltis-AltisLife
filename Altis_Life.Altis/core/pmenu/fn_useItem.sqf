@@ -12,7 +12,7 @@ _item = lbData[2005,(lbCurSel 2005)];
 
 switch (true) do
 {
-	case (_item == "water"):
+	case (_item in ["water","ofanta","sparkwater","canecola","hotchoc","greentea","unsweettea","pepsi"]):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -87,8 +87,8 @@ switch (true) do
 	{
 		[] spawn life_fnc_lockpick;
 	};
-	
-	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach","froglegs"]):
+    
+	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach","froglegs","spaghetti","fettuccine","gsalad","neopizza","breadsticks","taco","burrito","enchillada","chipsalsa","mexrice","nachos","vegrice","lomein","eggroll","springroll","sushi","veghakka","dumplings","vegburger","curlyfries","icecream","applepie","lollipop"]):
 	{
 		[_item] call life_fnc_eatFood;
 	};
@@ -179,6 +179,11 @@ switch (true) do
 		{
 			[] spawn life_fnc_krok;
 		};
+	};
+    
+    case (_item in ["roadcone","roadbarrier","tapesign","arrowleft","arrowright"]):
+	{
+		[_item] spawn life_fnc_placeObject;
 	};
 	
 	default

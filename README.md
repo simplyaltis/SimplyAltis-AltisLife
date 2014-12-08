@@ -77,6 +77,14 @@ WIP Changelog - 12/7/14
 - Fixed not being able to escort ziptied SAPD members
 - Increased diameter of gather zones
 - Gathering resources is randomized from 1 to X, where X is 3 for legal resouses and X is 2 for illegal resources.
-- Damage calculations are edited. No more instant heals by taze or vdm.
+- Damage calculations are edited. No more instant heals by taze or vdm
 - Sorted all the Lists!
 - Disabled all the radio spam and ai voices
+- Added lockpicks to medic market
+- Decreased fatigue on over-eating
+- Added many, many, many new food items. Eating these new food items will not result in over-eating fatigue and sets food to 100
+- Added Road cones, Road barriers, Tapes, Arrows for SAPD to control an area. Like real cops!
+- SAS members can now purchase and give out lollipops to our citizens
+- More items are now removed on being arrested
+- All the new items are saved and persistant in your inventory
+- Markets are now alphabetized

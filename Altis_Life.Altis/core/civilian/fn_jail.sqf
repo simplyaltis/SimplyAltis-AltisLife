@@ -51,6 +51,12 @@ if(life_inv_kidney > 0) then {[false,"kidney",life_inv_kidney] call life_fnc_han
 if(life_inv_mash > 0) then {[false,"mash",life_inv_mash] call life_fnc_handleInv;};
 if(life_inv_blastingcharge > 0) then {[false,"blastingcharge",life_inv_blastingcharge] call life_fnc_handleInv;};
 if(life_inv_zipties > 0) then {[false,"zipties",life_inv_zipties] call life_fnc_handleInv;};
+if(life_inv_arrowright > 0) then {[false,"arrowright",life_inv_arrowright] call life_fnc_handleInv;};
+if(life_inv_arrowleft > 0) then {[false,"arrowleft",life_inv_arrowleft] call life_fnc_handleInv;};
+if(life_inv_tapesign > 0) then {[false,"tapesign",life_inv_tapesign] call life_fnc_handleInv;};
+if(life_inv_roadbarrier > 0) then {[false,"roadbarrier",life_inv_roadbarrier] call life_fnc_handleInv;};
+if(life_inv_roadcone > 0) then {[false,"roadcone",life_inv_roadcone] call life_fnc_handleInv;};
+if(life_inv_spikeStrip > 0) then {[false,"spikeStrip",life_inv_spikeStrip] call life_fnc_handleInv;};
 life_is_arrested = true;
 
 removeAllWeapons player;

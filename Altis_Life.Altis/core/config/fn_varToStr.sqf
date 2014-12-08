@@ -88,6 +88,43 @@ switch (_var) do
     case "life_inv_froglegs": {"Frog Legs"};
     case "life_inv_scalpel": {"Scalpel"};
     case "life_inv_craftingmat": {"Altis Stone"};
+    
+    case "life_inv_spaghetti": {"Spaghetti"};
+    case "life_inv_fettuccine": {"Fettuccine Alfredo"};
+    case "life_inv_gsalad": {"Garden Salad"};
+    case "life_inv_neopizza": {"Neapolitan Pizza"};
+    case "life_inv_breadsticks": {"Bread Sticks"};
+    case "life_inv_ofanta": {"Orange Fanta"};
+    case "life_inv_sparkwater": {"Sparkling Water"};
+    case "life_inv_taco": {"Bean Taco"};
+    case "life_inv_burrito": {"Cheese Burrito"};
+    case "life_inv_enchillada": {"Enchillada"};
+    case "life_inv_chipsalsa": {"Chips and Salsa"};
+    case "life_inv_mexrice": {"Mexican Rice"};
+    case "life_inv_nachos": {"Nachos"};
+    case "life_inv_canecola": {"Sugar Cane Cola"};
+    case "life_inv_hotchoc": {"Aztec Hot Chocolate"};
+    case "life_inv_vegrice": {"Vegetable Fried Rice"};
+    case "life_inv_lomein": {"Lo Mein"};
+    case "life_inv_eggroll": {"Egg Roll"};
+    case "life_inv_springroll": {"Spring Roll"};
+    case "life_inv_sushi": {"Sushi"};
+    case "life_inv_veghakka": {"Vegetable Hakka Noodles"};
+    case "life_inv_dumplings": {"Dumplings"};
+    case "life_inv_greentea": {"Green Tea"};
+    case "life_inv_vegburger": {"Veggie Burger"};
+    case "life_inv_curlyfries": {"Curly Fries"};
+    case "life_inv_unsweettea": {"Unsweet Tea"};
+    case "life_inv_pepsi": {"Pepsi"};
+    case "life_inv_icecream": {"Ice cream"};
+    case "life_inv_applepie": {"Apple Pie"};
+    case "life_inv_lollipop": {"Lollipop"};
+    
+    case "life_inv_roadcone": {"Road Cone"};
+	case "life_inv_roadbarrier": {"Road Barrier"};
+	case "life_inv_tapesign": {"Tape Barrier"};
+	case "life_inv_arrowleft": {"Left Arrow"};
+	case "life_inv_arrowright": {"Right Arrow"};
 	
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

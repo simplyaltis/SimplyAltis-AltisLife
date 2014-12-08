@@ -66,6 +66,9 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man" && _curTarget distance playe
 	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
 	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
 	_money = "Land_Money_F";
+    _copPlacement = [
+		"RoadCone_L_F","RoadBarrier_F","TapeSign_F","ArrowDesk_L_F","ArrowDesk_R_F"
+	];
 	
 	//It's a vehicle! open the vehicle interaction key!
 	if(_isVehicle) then {
@@ -101,6 +104,10 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man" && _curTarget distance playe
 					//_handle = [_curTarget] spawn life_fnc_pickupMoney;
                     _handle = [[_curTarget, player],"TON_fnc_initMoneyPickup",false,false] spawn life_fnc_MP;
 					waitUntil {scriptDone _handle};
+				} else {
+					if((typeOf _curTarget) in _copPlacement && playerSide in [west]) then {
+						[] spawn life_fnc_removeObject;
+					};
 				};
 			};
 		};

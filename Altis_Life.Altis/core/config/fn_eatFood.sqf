@@ -26,10 +26,43 @@ if([false,_food,1] call life_fnc_handleInv) then {
 		case "donuts": {_val = 30};
 		case "tbacon": {_val = 40};
 		case "peach": {_val = 10};
+        
+        case "spaghetti": {_val = 100};
+        case "fettuccine": {_val = 100};
+        case "gsalad": {_val = 100};
+        case "neopizza": {_val = 100};
+        case "breadsticks": {_val = 100};
+        case "taco": {_val = 100};
+        case "burrito": {_val = 100};
+        case "enchillada": {_val = 100};
+        case "chipsalsa": {_val = 100};
+        case "mexrice": {_val = 100};
+        case "nachos": {_val = 100};
+        case "vegrice": {_val = 100};
+        case "lomein": {_val = 100};
+        case "eggroll": {_val = 100};
+        case "springroll": {_val = 100};
+        case "sushi": {_val = 100};
+        case "veghakka": {_val = 100};
+        case "dumplings": {_val = 100};
+        case "vegburger": {_val = 100};
+        case "curlyfries": {_val = 100};
+        case "icecream": {_val = 100};
+        case "applepie": {_val = 100};
+        case "lollipop": {_val = 100};
 	};
 
 	_sum = life_hunger + _val;
-	if(_sum > 100) then {_sum = 100; player setFatigue 1; hint "You have over eaten, you are now feeling fatigued.";};
+	if(_sum > 100) then
+    {
+        _sum = 100; 
+        
+        if(_food in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach","froglegs"]) then
+        {
+            player setFatigue 0.5; 
+            hint "You have over eaten, you are now feeling fatigued.";
+        };
+    };
 	life_hunger = _sum;
     
     player say3D "eat";
