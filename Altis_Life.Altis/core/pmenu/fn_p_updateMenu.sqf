@@ -41,6 +41,9 @@ _near_units = [];
 	};
 } foreach _near_units;
 
+lbSort _near; //Sort the list alphabetically
+lbSort _near_i; //Sort the list alphabetically
+
 _mstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\bank.paa'/> <t size='0.8px'>$%1</t><br/><img size='1.2' image='icons\money.paa'/> <t size='0.8'>$%2</t>",[life_rupees] call life_fnc_numberText,[life_dosh] call life_fnc_numberText];
 ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 {

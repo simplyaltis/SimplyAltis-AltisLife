@@ -36,6 +36,8 @@ switch(_type) do
 				_cPlayerList lbSetData [(lbSize _cPlayerList)-1,str(_x)];
 			};
 		} forEach playableUnits;
+        
+        lbSort _cPlayerList; //Sort the list alphabetically
 		
 		[[getPlayerUID player, player],"TON_fnc_msgRequest",false] spawn life_fnc_MP;
 		ctrlEnable[887892,false];

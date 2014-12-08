@@ -26,6 +26,8 @@ _units = [];
 	};
 } foreach _info;
 
+lbSort _list; //Sort the list alphabetically
+
 ctrlSetText[2404,"Connection Established"];
 
 if(((lbSize _list)-1) == -1) then

@@ -31,4 +31,7 @@ lbClear _list;
 	_list lbAdd format["%1 - %2", _x getVariable["realname",name _x],_side];
 	_list lbSetdata [(lbSize _list)-1,str(_x)];
 } foreach playableUnits;
+
+lbSort _list; //Sort the list alphabetically
+
 if(__GETC__(life_bondlevel) < 1) exitWith {closeDialog 0;};

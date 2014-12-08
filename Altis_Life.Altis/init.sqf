@@ -23,4 +23,9 @@ profilenamespace setvariable ['GUI_BCG_RGB_A',0.7];
 
 _igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 
+player disableConversation true;
+enableSentences false;
+enableRadio false;
+0 fadeRadio 0;
+
 StartProgress = true;

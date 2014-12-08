@@ -35,4 +35,6 @@ if((__GETC__(life_bondlevel) < 1)) then
 	};
 } foreach playableUnits;
 
+lbSort _units; //Sort the list alphabetically
+
 lbSetCurSel [3004,0];

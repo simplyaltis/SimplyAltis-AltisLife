@@ -41,6 +41,8 @@ _text ctrlSetStructuredText parseText format["<img size='1.7' image='icons\bank.
 	};
 } foreach playableUnits;
 
+lbSort _units; //Sort the list alphabetically
+
 lbSetCurSel [2703,0];
 
 if(isNil {(grpPlayer getVariable "gang_bank")}) then {

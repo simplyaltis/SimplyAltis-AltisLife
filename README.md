@@ -36,7 +36,7 @@ ToDo - 12/5/14
 - [x] hatchback lights
 - [ ] replace createvehicle
 - [ ] Add: roadbarries, roadcone, tapesign, arrowleft, arrowright, lollipops(medic)
-- [ ] sort the lists
+- [x] sort the lists
 - [ ] finalize be filters
 - [ ] optimize mission sqm file === MISSIONFILE
 - [ ] change the server name + add slots to 120 + add more civ/cop/medic slots
@@ -78,4 +78,5 @@ WIP Changelog - 12/7/14
 - Increased diameter of gather zones
 - Gathering resources is randomized from 1 to X, where X is 3 for legal resouses and X is 2 for illegal resources.
 - Damage calculations are edited. No more instant heals by taze or vdm.
-- 
+- Sorted all the Lists!
+- Disabled all the radio spam and ai voices
