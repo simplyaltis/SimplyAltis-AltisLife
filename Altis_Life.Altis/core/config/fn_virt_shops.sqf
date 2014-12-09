@@ -31,8 +31,8 @@ switch (_shop) do
     case "pmetal": {["Metal Dealers",["goldr","platinumm"]]};
     case "bountyhunter": {["Bounty Hunter Shop",["apple","rabbit","fuelF","lockpick","peach","redgull","tbacon","water","zipties"]]};
     
-    case "italian": {["Ristorante Italiano",["breadsticks","fettuccine","gsalad","neopizza","ofanta","spaghetti","sparkwater","water"]]]};
-    case "mexican": {["Nacho Crotcho",["hotchoc","burrito","chipsalsa","enchillada","mexrice","nachos","canecola","taco","water"]]]};
+    case "italian": {["Ristorante Italiano",["breadsticks","fettuccine","gsalad","neopizza","ofanta","spaghetti","sparkwater","water"]]};
+    case "mexican": {["Nacho Crotcho",["hotchoc","burrito","chipsalsa","enchillada","mexrice","nachos","canecola","taco","water"]]};
     case "chinese": {["Fu King Chinese",["dumplings","eggroll","greentea","lomein","springroll","sushi","vegrice","veghakka","water"]]};
     case "bargrill": {["Simply Altis Bar & Grill",["applepie","bottledbeer","curlyfries","icecream","pepsi","unsweettea","vegburger","water"]]};
 };

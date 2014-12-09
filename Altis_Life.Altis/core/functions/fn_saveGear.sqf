@@ -255,7 +255,7 @@ if(count (handGunItems player) > 0) then
     ["life_inv_roadbarrier", life_inv_roadbarrier],
     ["life_inv_tapesign", life_inv_tapesign],
     ["life_inv_arrowleft", life_inv_arrowleft],
-    ["life_inv_arrowright" life_inv_arrowright]
+    ["life_inv_arrowright", life_inv_arrowright]
 ];
 
 _return pushBack _uItems;
