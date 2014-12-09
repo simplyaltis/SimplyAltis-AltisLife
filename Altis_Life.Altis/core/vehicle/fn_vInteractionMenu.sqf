@@ -114,11 +114,13 @@ if(playerSide == west) then {
 if(playerSide == independent) then {
     if(__GETC__(life_medicLevel) > 2) then {
         _Btn5 ctrlEnable true;
+        _Btn5 ctrlShow true;
         _Btn5 ctrlSetText localize "STR_vInAct_Impound";
         _Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
     };
     
     _Btn4 ctrlEnable true;
+    _Btn4 ctrlShow true;
     _Btn4 ctrlSetText localize "STR_vInAct_PullOut";
 	_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
 	if(count crew _curTarget == 0) then {_Btn4 ctrlEnable false;};

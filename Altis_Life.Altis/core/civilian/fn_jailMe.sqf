@@ -18,11 +18,6 @@ player forceAddUniform "U_C_WorkerCoveralls";
 
 [] call life_fnc_updateClothing;
 
-player setDamage 0;
-life_thirst = 90;
-life_hunger = 90;
-[] call life_fnc_hudUpdate;
-
 if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); };
 
 if(count _ret > 0) then { life_bail_amount = (_ret select 3); } else { life_bail_amount = 5000; _time = time + (10 * 60); };
@@ -50,7 +45,7 @@ while {true} do
 		hintSilent parseText format[(localize "STR_Jail_Time")+ "<br/> <t size='2'><t color='#FF0000'>%1</t></t><br/><br/>" +(localize "STR_Jail_Pay")+ " %3<br/>" +(localize "STR_Jail_Price")+ " $%2",_countDown,[life_bail_amount] call life_fnc_numberText,if(isNil "life_canpay_bail") then {"Yes"} else {"No"}];
 	};
 	
-	if(player distance (getMarkerPos "jail_marker") > 100 && alive player) exitWith {
+	if(player distance (getMarkerPos "jail_marker") > 100) exitWith {
 		_esc = true;
 	};
 	

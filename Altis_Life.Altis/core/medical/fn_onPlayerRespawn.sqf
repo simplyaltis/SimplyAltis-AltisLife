@@ -33,4 +33,4 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 player enableFatigue (__GETC__(life_enableFatigue));
 
 life_is_alive = true;
-[8] call SOCK_fnc_updatePartial
+[8] call SOCK_fnc_updatePartial;

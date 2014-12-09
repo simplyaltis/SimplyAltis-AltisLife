@@ -394,6 +394,8 @@ class Life_Client_Core
         class smokeweed {};
         class heroine {};
         class krok {};
+        class placeObject {};
+        class removeObject {};
 	};
 	
 	class Dialog_Controls

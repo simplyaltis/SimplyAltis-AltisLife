@@ -47,4 +47,4 @@ player setVariable["Reviving",nil,TRUE];
 [] call life_fnc_hudUpdate; //Request update of hud.
 
 life_is_alive = true;
-[8] call SOCK_fnc_updatePartial
+[8] call SOCK_fnc_updatePartial;
