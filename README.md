@@ -88,7 +88,6 @@ WIP Changelog - 12/7/14
 - More items are now removed on being arrested
 - All the new items are saved and persistent in your inventory
 - Markets are now alphabetized
-- Cleaned up string tables. We are an english only server!
 - Compressed all the skins and removed unnecessary ones
 - Added official SimplyAltis SAPD vehicle skins by Off. Devon!
 - Added position-persistence. If you are a civilian, then you will spawn back where you disconnected/left if you are alive
@@ -96,3 +95,4 @@ WIP Changelog - 12/7/14
 - Added new restaurants featuring the new food items in kavala
 - Removed unnecessary things in mission file
 - Updated the persistent wanted list: optimized and fixed some bugs
+- Cleaned up string tables. We are an english only server!
