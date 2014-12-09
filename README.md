@@ -13,8 +13,8 @@ ToDo - 12/5/14
 - [ ] posting on forums = +1000 per post
 - [ ] auto donator setup
 - [ ] whitelisting forms
-- [ ] new billboards === MISSIONFILE
-- [ ] new food places === MISSIONFILE
+- [x] new billboards === MISSIONFILE
+- [x] new food places === MISSIONFILE
 - [ ] new guides on map
 - [ ] revoke licenses
 - [ ] seize vehicles
@@ -25,7 +25,7 @@ ToDo - 12/5/14
 - [ ] impounding for medics
 - [ ] underwater diving === MISSIONFILE
 - [ ] police rep points?
-- [ ] remove school in kavala === MISSIONFILE
+- [x] remove school in kavala === MISSIONFILE
 - [ ] move stuff in kavala === MISSIONFILE
 - [ ] split bank accounts
 - [ ] centralize messages: restrain msg for cops, etc.
@@ -93,3 +93,5 @@ WIP Changelog - 12/7/14
 - Added official SimplyAltis SAPD vehicle skins by Off. Devon!
 - Added position-persistence. If you are a civilian, then you will spawn back where you disconnected/left if you are alive
 - Crafting now adds the weapon in your backpack or in your hands
+- Added new restaurants featuring the new food items in kavala
+- Removed unnecessary things in mission file
