@@ -52,10 +52,10 @@ switch(_mode) do {
 	};
 	
 	case 4: {
-		_value = [_this,2,false,[true]] call BIS_fnc_param;
-		_value = [_value] call DB_fnc_bool;
-		_query = format["UPDATE players SET alive='%1' WHERE playerid='%2'",_value,_uid];
-	};
+        _value = [_this,2,[],[[]]] call BIS_fnc_param;
+        _value = [_value] call DB_fnc_mresArray;
+        _query = format["UPDATE players SET civPosition='%1' WHERE playerid='%2'",_value,_uid];
+    };
 	
 	case 5: {
 		_value = [_this,2,false,[true]] call BIS_fnc_param;
@@ -75,6 +75,12 @@ switch(_mode) do {
 		_array = [_this,2,[],[[]]] call BIS_fnc_param;
 		[_uid,_side,_array,0] call TON_fnc_keyManagement;
 	};
+    
+    case 8: {
+        _value = [_this,2,false,[false]] call BIS_fnc_param;
+        _value = [_value,0] call DB_fnc_bool;
+        _query = format["UPDATE players SET alive='%1' WHERE playerid='%2'",_value,_uid];
+    };
 };
 
 if(_query == "") exitWith {};

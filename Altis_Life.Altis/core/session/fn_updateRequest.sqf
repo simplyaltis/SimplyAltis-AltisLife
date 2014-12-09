@@ -2,9 +2,11 @@
 	File: fn_updateRequest.sqf
 	Author: Tonic
 */
-private["_packet","_array","_flag"];
+private["_packet","_array","_flag","_civPosition"];
 _packet = [getPlayerUID player,(profileName),playerSide,life_dosh,life_rupees];
 _array = [];
+//At the top declare this
+_civPosition = getPosATL player;
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
 {
 	if(_x select 1 == _flag) then
@@ -19,6 +21,8 @@ _packet pushBack life_gear;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
+        _packet pushBack _civPosition;
+        _packet pushBack life_is_alive;
 	};
 };
 

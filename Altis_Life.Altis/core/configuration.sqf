@@ -41,6 +41,8 @@ life_isSuicide = false;
 life_action_gathering = false;
 life_extrapolice = 0;
 life_request_timer = false;
+life_is_alive = false;
+civ_position = [];
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?

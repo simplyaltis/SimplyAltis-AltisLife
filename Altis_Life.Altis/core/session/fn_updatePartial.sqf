@@ -50,6 +50,10 @@ switch(_mode) do {
 		_packet set[2,life_dosh];
 		_packet set[4,life_rupees];
 	};
+    
+    case 8: {		
+        _packet set[2,life_is_alive];	
+    };
 };
 
 [_packet,"DB_fnc_updatePartial",false,false] call life_fnc_MP;

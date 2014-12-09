@@ -13,18 +13,28 @@ civ_spawn_4 = nearestObjects[getMarkerPos  "civ_spawn_4", ["Land_i_Shop_01_V1_F"
 civ_spawn_5 = nearestObjects[getMarkerPos  "civ_spawn_5", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
 waitUntil {!(isNull (findDisplay 46))};
 
-if(life_is_arrested) then
+if(life_is_alive && !life_is_arrested) then
 {
-	life_is_arrested = false;
-	[player,true] spawn life_fnc_jail;
+    player setPosATL civ_position;
 }
-	else
+else 
 {
-	[] call life_fnc_spawnMenu;
-	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
-	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+    if (!life_is_alive && !life_is_arrested) then
+    {
+        [] call life_fnc_spawnMenu;
+        waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
+        waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+    }	
+    else 
+    {
+        if(life_is_arrested) then
+        {
+            life_is_arrested = false;
+            [player,true] spawn life_fnc_jail;
+        };
+    }; 
 };
-player addRating 9999999;
+player addRating 9999999; 
 
 [] call life_fnc_updateClothing;
 

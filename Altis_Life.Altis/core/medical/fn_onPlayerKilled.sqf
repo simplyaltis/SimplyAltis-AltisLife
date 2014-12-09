@@ -115,3 +115,6 @@ life_usedebit = false;
 
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
+
+life_is_alive = false;
+[8] call SOCK_fnc_updatePartial;
