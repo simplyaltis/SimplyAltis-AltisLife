@@ -16,7 +16,10 @@ _allMaterial = true;
 
 _matsNeed = 0;
 
-if(!(player canAdd _item)) exitWith {hint localize "STR_NOTF_NoRoom";};
+if(!(player canAdd _item) && primaryWeapon player != "") exitWith
+{
+    hint localize "STR_NOTF_NoRoom";
+};
 
 _config = ["weapon"] call life_fnc_craftCfg;
 {
@@ -93,14 +96,18 @@ while{true} do
 
 _invSize = count _oldItem;
 
-if(!(player addItem _item)) exitWith {
-	5 cutText ["","PLAIN"];
+if(!(player addItem _item)) then
+{
+    if(!(player addWeapon _item)) exitWith {
+        5 cutText ["","PLAIN"];
 
-	for [{_i = 0},{_i < _invSize - 1},{_i = _i + 2}] do {
-		_handledItem = [_oldItem select _i,1] call life_fnc_varHandle;
-		[true,_handledItem,_oldItem select _i+1] call life_fnc_handleInv;
-	};
-	life_is_processing = false;
+        for [{_i = 0},{_i < _invSize - 1},{_i = _i + 2}] do {
+            _handledItem = [_oldItem select _i,1] call life_fnc_varHandle;
+            [true,_handledItem,_oldItem select _i+1] call life_fnc_handleInv;
+        };
+        life_is_processing = false;
+        _ui = "statusBar" call BIS_fnc_rscLayer;_ui cutRsc["statusBar","PLAIN"];
+    };
 };
 5 cutText ["","PLAIN"];
 titleText[format[localize "STR_CRAFT_Process",_itemName],"PLAIN"];

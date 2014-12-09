@@ -91,4 +91,5 @@ WIP Changelog - 12/7/14
 - Cleaned up string tables. We are an english only server!
 - Compressed all the skins and removed unnecessary ones
 - Added official SimplyAltis SAPD vehicle skins by Off. Devon!
-- Added position-persistance. If you are a civilian, then you will spawn back where you disconnected/left if you are alive.
+- Added position-persistence. If you are a civilian, then you will spawn back where you disconnected/left if you are alive
+- Crafting now adds the weapon in your backpack or in your hands
