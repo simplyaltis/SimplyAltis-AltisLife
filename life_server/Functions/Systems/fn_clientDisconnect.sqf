@@ -11,9 +11,9 @@ _id = _this select 1;
 _uid = _this select 2;
 _name = _this select 3;
 
-//[_uid,0] spawn life_fnc_wantedRemove;
-
 if(isNull _unit) exitWith{};
+
+if(side _unit == civilian) then {[_uid,1] spawn life_fnc_wantedRemove;};
 
 if(side _unit == civilian) then {
 	[_uid,civilian,getPosATL _unit,4] spawn DB_fnc_updatePartial;

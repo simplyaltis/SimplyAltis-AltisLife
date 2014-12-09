@@ -86,7 +86,7 @@ WIP Changelog - 12/7/14
 - Added Road cones, Road barriers, Tapes, Arrows for SAPD to control an area. Like real cops!
 - SAS members can now purchase and give out lollipops to our citizens
 - More items are now removed on being arrested
-- All the new items are saved and persistant in your inventory
+- All the new items are saved and persistent in your inventory
 - Markets are now alphabetized
 - Cleaned up string tables. We are an english only server!
 - Compressed all the skins and removed unnecessary ones
@@ -95,3 +95,4 @@ WIP Changelog - 12/7/14
 - Crafting now adds the weapon in your backpack or in your hands
 - Added new restaurants featuring the new food items in kavala
 - Removed unnecessary things in mission file
+- Updated the persistent wanted list: optimized and fixed some bugs

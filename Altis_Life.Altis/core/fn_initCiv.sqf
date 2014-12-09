@@ -38,4 +38,4 @@ player addRating 9999999;
 
 [] call life_fnc_updateClothing;
 
-[[getPlayerUID player],"life_fnc_loadBounties",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,profileName],"life_fnc_loadBounties",false,false] spawn life_fnc_MP;
