@@ -57,7 +57,7 @@ if(!isNull _source) then {
         if(_curMag in ["30Rnd_556x45_Stanag_Tracer_Red"] && _projectile in ["B_556x45_Ball_Tracer_Red"] && _curWep in ["arifle_TRG21_MRCO_F"]) then {
             private["_isVehicle"];
             _isVehicle = if(vehicle player != player) then {true} else {false};
-            _damage = damage player; 
+            _damage = 0; 
             
             if(!_isVehicle) then {
                 [_unit,_source] spawn life_fnc_airSoft;
@@ -69,7 +69,7 @@ if(!isNull _source) then {
 if(!isNull _source) then {
    _isVehicle = if(vehicle _source != _source) then {true} else {false};
    if (_isVehicle) then {
-        _damage = damage player;
+        _damage = 0;
 		[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
         //_unit = [_this,0,ObjNull,[Objnull]] call BIS_fnc_param;
 		//_anim = [_this,1,"",[""]] call BIS_fnc_param;

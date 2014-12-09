@@ -26,6 +26,6 @@ player assignItem "ItemGPS";
 player addUniform "U_C_WorkerCoveralls";
 
 [[player,0,"textures\clothing\medic_uniform.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
-[] spawn life_fnc_updateClothing;
+[] call life_fnc_updateClothing;
 
 [] call life_fnc_saveGear;

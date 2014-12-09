@@ -3,7 +3,7 @@
 	Author: Kevin Webb
 	Description: Adds the player to the wanted list when they join the server if they were wanted.
 */
-private["_uid"];
+private["_uid","_name"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 

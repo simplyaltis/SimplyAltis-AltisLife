@@ -19,5 +19,4 @@ if(([true,_name,1] call life_fnc_handleInv)) then
 {
 	titleText["Picked up item.","PLAIN"];
 	deleteVehicle _obj;
-	[10] call life_fnc_addXP;
 };

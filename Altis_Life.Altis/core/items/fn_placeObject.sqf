@@ -31,5 +31,4 @@ if(([false,_type,1] call life_fnc_handleInv)) then {
 	if(isNull _object) exitWith {life_object = ObjNull;};
 	_object setPos [(getPos _object select 0),(getPos _object select 1),0];
 	_object enableSimulation false;
-	[10] call life_fnc_addXP;
 };
