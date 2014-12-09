@@ -5,7 +5,7 @@ player say2d "welcome";
 _role1 = "Welcome to Simply Altis";
 _role1names = ["www.simplyaltis.com"];
 _role2 = "Join Our Teamspeak";
-_role2names = ["ts.simplyaltis.com:7291"];
+_role2names = ["ts.simplyaltis.com"];
 _role3 = "Server Rules";
 _role3names = ["Must be followed at all times. Go to our website to see all the rules. RDM + VDM IS NOT ALLOWED!"]; 
 _role4 = "Please Report";

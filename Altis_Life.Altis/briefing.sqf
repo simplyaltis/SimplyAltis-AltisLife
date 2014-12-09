@@ -66,9 +66,31 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Make Money (Legal)",
 				"
-				* Gather peaches and sell them at the market<br/>
-				* Gather apples and sell them at the market<br/><br/>
-				* Coming soon...<br/><br/>
+				* Picking Apples<br/>
+				* Picking Peaches<br/>
+				* Delivery Missions<br/>
+				* Catching fish<br/>
+				* Mining Copper (L)<br/>
+				* Mining Iron (L)<br/>
+				* Mixing Cement (L)<br/>
+				* Glass Production (L)<br/>
+				* Processing Salt (L)<br/>
+				* Refining Oil (L)<br/>
+				* Brewing Beer (L)<br/>
+				* Aging Whiskey (L)<br/>
+				* Smelting Gold (L)<br/>
+				* Mining Platinum (L)<br/>
+				* Cutting Diamonds (L)<br/>
+				* Catching wanted criminals (L) (G)<br/>
+				* Tipping the SAPD<br/>
+				* Cooking frog legs<br/>
+				* Crafting guns<br/>
+				* Join the SAPD (W)<br/>
+				* Signup for the SAS (W)<br/>
+				* Donate to the Server<br/>
+				* Become a Lawyer (L)<br/>
+				* Bodyguarding<br/>
+				* Begging<br/><br/>
 				
 				"
 		]
@@ -78,18 +100,20 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Make Money (Illegal)",
 				"
-				* Cocaine ($50K for processing license)<br/>
-				* Heroine ($50K for procesing license)<br/>
-				* Weed ($30K for processing license)<br/>
-				* Crystal Meth (Equal Parts Ephedra and Phosphorous processes into unprocessed meth and then can be processed again into Blue Crystal Meth - $50K for processing license)<br/>
-				* LSD (Pick up frogs at the frog swamp, take them to Frog LSD to process into LSD - $35K for processing license)<br/>
-				* Stealing Kidneys (Knock the person out and scroll over their body to Harvest Organs - You need a scalpel ($12K) found at the rebel and gang markets)<br/>
-				* Federal Reserve Robbery (You need boltcutters for the door and a blasting charge for the vault both of which can only be purchased at rebel and gang markets)<br/>
-					- Once the vault is blasted open, grab the gold bars and put them in your vehicle - gold bars are too heavy for helicopters<br/>
-				* Moonshine (Start by making mash with water(found at any market) and cornmeal (found at the bootlegger) then harvest yeast (found at the yeast swamp) then use the moonshine distillery to process them and bottle them for sale<br/>
-				* Stealing Vehicles to chop shop them (Land and Air Vehicles)<br/>
-				* Robbing people with a gun (Knock them out with SHIFT + G, and use the Rob person option)<br/>
-				* Kidnapping persons to demand money from the SAPD<br/><br/>
+				* Weed harvesting (L)<br/>
+				* Extracting LSD (L)<br/>
+				* Picking Cocaine (L)<br/>
+				* Picking Heroin (L)<br/>
+				* Crystalizing Meth (L)<br/>
+				* Brewing Moonshine (L)<br/>
+				* Robbing civilians<br/>
+				* Federal Reserve Heist<br/>
+				* Holding up a Gas Station (G)<br/>
+				* Organ theft (G)<br/>
+				* Kidnapping and Ransoming<br/>
+				* Chopshopping Any Vehicles<br/>
+				* Capturing turtles (G)<br/>
+				* Selling Weapons (G)<br/><br/>
 				
 				"
 		]
