@@ -7,7 +7,7 @@ ToDo - 12/5/14
 - [ ] more crafting
 - [ ] dynamic markets
 - [ ] fix bugs
-- [ ] save civ positions
+- [x] save civ positions
 - [ ] bounty hud
 - [ ] bounty hunter fixes/features: taze/arrest only wanted, alert bounty, 30 round mags, player tag icon, pullout players
 - [ ] posting on forums = +1000 per post
@@ -29,18 +29,18 @@ ToDo - 12/5/14
 - [ ] move stuff in kavala === MISSIONFILE
 - [ ] split bank accounts
 - [ ] centralize messages: restrain msg for cops, etc.
-- [ ] shrink pbo, shrink textures
+- [x] shrink pbo, shrink textures
 - [x] new music
 - [ ] add to wanted list
 - [ ] add npc loadouts === MISSIONFILE
 - [x] hatchback lights
 - [ ] replace createvehicle
-- [ ] Add: roadbarries, roadcone, tapesign, arrowleft, arrowright, lollipops(medic)
+- [x] Add: roadbarries, roadcone, tapesign, arrowleft, arrowright, lollipops(medic)
 - [x] sort the lists
 - [ ] finalize be filters
 - [ ] optimize mission sqm file === MISSIONFILE
 - [ ] change the server name + add slots to 120 + add more civ/cop/medic slots
-- [ ] add general store on rebel outposts === MISSIONFILE
+- [x] add general store on rebel outposts === MISSIONFILE
 - [ ] teargas
 - [ ] bank alarms
 - [x] change auto save message
@@ -55,44 +55,25 @@ ToDo - 12/5/14
 - [x] add min transfer
 
 
-
-WIP Changelog - 12/7/14
+WIP Changelog - 12/9/14
 ------
-- Adjust max carrying weight
-- Fixed jail exploit
-- Changed Auto-Save Message
-- New Intro Music
-- Altered welcome message
-- Fixed looting dead corpses exploit
-- Added a minimum to bank transfers to stop $1 donation trolling
-- Fixed debit card purchase not updating atm value
-- Finally fixed hatchback cop lights - FOR YOU BRIAN
-- Added ability to impound vehicles for SAS members above level 2 (Crisis Operator & above)
-- Fixed SAS paycheck amounts (200,300,500,600,700 to 200,300,400,500,600)
-- SAS members now have the ability to pullout players from any vehicles (similar to SAPD)
-- Players can now pullout players from their own vehicles if they are stationary
-- Changed revive animation
-- Altered the deathcam
-- SAS members can now see other SAS members on the map + altered dead markers for SAS
-- Fixed not being able to escort ziptied SAPD members
-- Increased diameter of gather zones
-- Gathering resources is randomized from 1 to X, where X is 3 for legal resouses and X is 2 for illegal resources.
-- Damage calculations are edited. No more instant heals by taze or vdm
-- Sorted all the Lists!
-- Disabled all the radio spam and ai voices
-- Added lockpicks to medic market
-- Decreased fatigue on over-eating
-- Added many, many, many new food items. Eating these new food items will not result in over-eating fatigue and sets food to 100
-- Added Road cones, Road barriers, Tapes, Arrows for SAPD to control an area. Like real cops!
-- SAS members can now purchase and give out lollipops to our citizens
-- More items are now removed on being arrested
-- All the new items are saved and persistent in your inventory
-- Markets are now alphabetized
-- Compressed all the skins and removed unnecessary ones
-- Added official SimplyAltis SAPD vehicle skins by Off. Devon!
-- Added position-persistence. If you are a civilian, then you will spawn back where you disconnected/left if you are alive
-- Crafting now adds the weapon in your backpack or in your hands
-- Added new restaurants featuring the new food items in kavala
-- Removed unnecessary things in mission file
-- Updated the persistent wanted list: optimized and fixed some bugs
-- Cleaned up string tables. We are an english only server!
+- Nothing Here
+
+
+Skill System
+------
+- Gain xp by doing various tasks
+- 25 levels in total. Each level has an exponential xp requirement. Each level gives you skill points
+- There are more things to spend skill points on then there are skill points. So people have to think before spending skill points
+
+
+Skill Tree
+------
+- Burglar
+   - Level 1 : LockPicking(10%)
+   - Level 2 : BoltCutters(10%)
+   - Level 3 : LockPicking(25%) + BoltCutters(25%)
+   - Level 4 : LockPicking Chance(50%)
+   - Level 5 : Chance of Wanted-List Avoidance(10%)
+   - Level 6 : LockPicking(50%) + BoltCutters(50%)
+   - Level 7 : Chance of Wanted-List Avoidance(25%)
