@@ -35,3 +35,6 @@ _sp = _spCfg select 0; //First option is set by default
 life_spawn_point = _sp;
 
 ctrlSetText[38501,format["%2: %1",_sp select 1,localize "STR_Spawn_CSP"]];
+
+life_is_alive = true;
+[8] call SOCK_fnc_updatePartial;
