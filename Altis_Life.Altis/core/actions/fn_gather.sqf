@@ -1,60 +1,63 @@
 /*
 	File: fn_gather.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+	Edited by SrgFlip
 	Description:
-	Main functionality for gathering.
+	Main functionality for gathering. - rewritten to work with a more user friendly configuration, as well as allowing easily to configure necessary items like pickaxe
 */
-if(isNil "life_action_gathering") then {life_action_gathering = false;};
-private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zone"];
-_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","heroin_1","cocaine_1","weed_1","weed_2","weed_3","hops_1","rye_1","yeast_1","phosphorous_1","ephedra_1","frog_swamp1"];
+private["_gather","_itemWeight","_diff","_itemName","_batchSize","_resourceZones","_resourceCfg", "_zone", "_x", "_valRequiredItem", "_requiredItem", "_zoneSize", "_varItem", "_valItem", "_startpos", "_difftotal"];
+
+//check if we are in the resource zone for any of the resources
 _zone = "";
-
-if(life_action_gathering) exitWith {}; //Action is in use, exit to prevent spamming.
-life_action_gathering = true;
-
-//Find out what zone we're near
 {
-	if(player distance (getMarkerPos _x) < 50) exitWith {_zone = _x;};
-} foreach _resourceZones;
+	_gather = _x;
+	_resourceCfg = [_gather] call life_fnc_resourceCfg;
+	_resourceZones = _resourceCfg select 0;
+	// if there are no zones defined we are done here
+	if (count _resourceZones == 0) exitWith {};
+	_zoneSize = _resourceCfg select 1;
+	_batchSize = _resourceCfg select 2;
+	_requiredItem = _resourceCfg select 3;
+	{
+		if((player distance (getMarkerPos _x)) < _zoneSize) exitWith {_zone = _x;};
+	} forEach _resourceZones;
+	//if we found a zone we are done here as well
+	if(_zone != "") exitWith {};
+} forEach resource_list;
 
-if(_zone == "") exitWith {
-	/*hint localize "STR_NOTF_notNearResource";*/
-	life_action_inUse = false;
+if(_zone == "") exitWith {};
+
+// if an item is required we need to check if we have that particular item in our inventory
+if(_requiredItem == "") then {
+	//to make the exitWith easier we assume that you have one
+	_valItem = 1;
+}
+else {
+	_varItem = [_requiredItem,0] call life_fnc_varHandle;
+	_valItem = missionNamespace getVariable _varItem;
 };
 
-//Get the resource that will be gathered from the zone name...
-switch(true) do {
-	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_gather = "apple"; _val = 3;};
-	case (_zone in ["peaches_1","peaches_2","peaches_3"]): {_gather = "peach"; _val = 3;};
-	case (_zone in ["heroin_1"]): {_gather = "heroinu"; _val = 1 + (round random 2);};
-	case (_zone in ["cocaine_1"]): {_gather = "cocaine"; _val = 1 + (round random 2);};
-    case (_zone in ["phosphorous_1"]): {_gather = "phosphorous"; _val = 1 + (round random 3);};
-    case (_zone in ["ephedra_1"]): {_gather = "ephedra"; _val = 1 + (round random 2);};
-    case (_zone in ["frog_swamp1"]): {_gather = "frog"; _val = 1 + (round random 2);};
-    case (_zone in ["hops_1"]): {_gather = "hops"; _val = 1 + (round random 3);};
-    case (_zone in ["rye_1"]): {_gather = "rye"; _val = 1 + (round random 3);};
-    case (_zone in ["yeast_1"]): {_gather = "yeast"; _val = 1 + (round random 3);};
-	case (_zone in ["weed_1","weed_2","weed_3"]): {_gather = "cannabis"; _val = 1 + (round random 2);};
-	default {""};
+_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+//lets check and exit with a nice message
+if (_valItem < 1) exitWith {
+	//TODO add translation string
+	titleText[format["A %1 is required to gather %2(s).", _requiredItem, _itemName],"PLAIN"];
 };
+
 //gather check??
-if(vehicle player != player) exitWith {};
+if((vehicle player) != player) exitWith {/*hint localize "STR_NOTF_GatherVeh";*/};
 
-_diff = [_gather,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
-life_action_inUse = true;
-for "_i" from 0 to 2 do
-{
-	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-	sleep 2.5;
+titleText["Starting gathering, stand still ..." ,"PLAIN"];
+_startpos = getPos player;
+_difftotal = 0;
+while {true} do {
+	sleep 5;
+	if(player distance _startpos > 3) exitWith { titleText[format["... gathering cancelled."],"PLAIN"]; };
+	_diff = [_gather,_batchSize,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+	if(_diff == 0) exitWith { titleText[format["... inventory full, gathered %2 %1(s) in total.", _itemName,_difftotal],"PLAIN"]; };
+	if(([true,_gather,_diff] call life_fnc_handleInv)) then
+	{
+		_difftotal = _difftotal + _diff;
+		titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_difftotal],"PLAIN"];
+	};
 };
-
-if(([true,_gather,_diff] call life_fnc_handleInv)) then
-{
-	_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
-};
-
-life_action_inUse = false;
