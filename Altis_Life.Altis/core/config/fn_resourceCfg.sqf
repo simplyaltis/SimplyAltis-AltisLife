@@ -130,4 +130,4 @@ switch(_resource) do {
 	};
 };
 
-[_resourceZones, _zoneSize,_batchSize, _requiredItem];
+[_resourceZones, _zoneSize, _batchSize, _requiredItem];

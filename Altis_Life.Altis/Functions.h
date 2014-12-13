@@ -163,6 +163,7 @@ class Life_Client_Core
 		class houseConfig {};
         class seizeCfg {};
         class craftCfg {};
+		class resourceCfg {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -378,7 +379,6 @@ class Life_Client_Core
 	class Items
 	{
 		file = "core\items";
-		class pickaxeUse {};
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};

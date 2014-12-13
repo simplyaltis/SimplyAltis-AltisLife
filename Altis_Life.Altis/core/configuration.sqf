@@ -319,6 +319,32 @@ life_illegal_items =
     ["goldbar",5000]
 ];
 
+/*
+	Resources list, see fn_resourceCfg.sqf for the configuration for each resource
+	to remove the ability to gather a specific resource just comment it out on the list (all zones will be deactivated)
+*/
+resource_list = [
+	"apple", 
+	"peach", 
+	"heroinu", 
+	"cocaine", 
+	"cannabis", 
+	"phosphorous", 
+	"ephedra", 
+	"copperore",
+	"ironore",
+	"salt",
+	"platinum",
+    "diamond",
+    "oilu",
+	"rock",
+	"frog",
+	"hops",
+	"rye",
+	"yeast",
+	"sand",
+	"gold"
+];
 
 /*
 	Sell / buy arrays
