@@ -47,7 +47,7 @@ switch(_resource) do {
 	};
 	
 	case  ("ephedra") : {
-		_batchSize =_batchSize = 1 + (round random 2);
+		_batchSize = 1 + (round random 2);
 		_resourceZones = ["ephedra_1"];
 	};
 	
