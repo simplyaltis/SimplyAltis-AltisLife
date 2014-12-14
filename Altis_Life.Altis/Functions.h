@@ -122,6 +122,7 @@ class Life_Client_Core
         class skyDiving {};
         class airSoft {};
         class craftAction {};
+		class copCrush {}; //Seize vehicle
 	};
 	
 	class Housing
