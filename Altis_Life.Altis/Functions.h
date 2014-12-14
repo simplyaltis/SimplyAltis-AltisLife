@@ -202,6 +202,7 @@ class Life_Client_Core
 		class wanted2 {};
         class craft {};
         class craft_update {};
+		class revokeLicense {};
 	};
 	
 	class Functions

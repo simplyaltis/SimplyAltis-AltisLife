@@ -29,3 +29,4 @@
 #include "channel.hpp"
 #include "wantedadd2.hpp"
 #include "craft.hpp"
+#include "revoke_license.h"
