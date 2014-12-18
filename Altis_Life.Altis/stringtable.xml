@@ -759,6 +759,12 @@
 			<Original>Store</Original>
 			<English>Store</English>
 		</Key>
+		<Key ID="STR_Trunk_Take_All">
+			<Original>Take All</Original>
+		</Key>
+		<Key ID="STR_Trunk_Store_All">
+			<Original>Store All</Original>
+		</Key>
 	</Package>
 	<Package name="Wanted_Menu">
 		<Key ID="STR_Wanted_Title">
@@ -1223,6 +1229,10 @@
 		<Key ID="STR_Civ_IsntEnoughGold">
 			<Original>There isn't %1 gold bar(s) in the safe!</Original>
 			<English>There isn't %1 gold bar(s) in the safe!</English>
+		</Key>
+		<Key ID="STR_VS_SellAllItem">
+			<Original>Sell All</Original>
+			<English>Sell All</English>
 		</Key>
 	</Package>
 	<Package name="Cop_Strings">
